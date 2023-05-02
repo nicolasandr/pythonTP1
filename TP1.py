@@ -1,4 +1,4 @@
-patente = input("Ingrese la patente del vehiculo: ").strip()
+patente = input("Ingrese la patente del vehiculo: ").replace(" ", "")
 tipo_de_vehiculo = int(input("Ingrese el tipo de vehiculo: (0: motocicleta, 1: automóvil, 2: camión): "))
 forma_de_pago = int(input("ingrese tipo de pago: (1: manual, 2: telepeaje): "))
 pais = int(input("Ingrese el pais donde se encuentra la cabina de peaje:\n(0: Argentina - 1: Bolivia - 2: Brasil - 3: Paraguay - 4: Uruguay).: "))
@@ -27,8 +27,10 @@ if tamanio_de_cadena_patente == 7:
         importe_base = 300
     else:
         patente = "Otro"
+        importe_base = 300
 else:
-    patente = "Error al cargar el codigo de patente.\nLa patente debe contener 7 digitos"
+    patente = "Otro"
+    importe_base = 300
 
 #Filtramos por tipo de vehiculo:
 if tipo_de_vehiculo == 0:
@@ -38,7 +40,7 @@ elif tipo_de_vehiculo == 1:
     tipo_de_vehiculo = "automovil"
 elif tipo_de_vehiculo == 2:
     tipo_de_vehiculo = "camion"
-    importe_base = (importe_base * 0.6) + importe_base
+    importe_base = (importe_base * 1.6)
 else :
     tipo_de_vehiculo = "El dato ingresado para identificar el tipo de vehiculo es Incorrecto! "
 
