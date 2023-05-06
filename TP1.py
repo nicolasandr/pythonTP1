@@ -58,8 +58,6 @@ elif tipo_de_vehiculo == 2:
 if forma_de_pago == 2:
     #telepeaje:(descuento del 10%)
     importe_base = importe_base - (importe_base * 0.1)
-else:
-    forma_de_pago = "El dato ingresado para seleccionar la forma de pago es Incorrecto!"
 
 #Emision de ticket:
 
